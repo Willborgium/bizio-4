@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BlackPlain.Bizio.App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:p="clr-namespace:BlackPlain.Bizio.App.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Bizio">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="false" IsEnabled="false" />
+    </Shell.BackButtonBehavior>
+    <ShellContent Route="root">
+        <p:TestPage />
+    </ShellContent>
+</Shell>
