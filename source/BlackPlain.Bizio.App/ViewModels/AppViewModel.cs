@@ -2,23 +2,17 @@
 
 namespace BlackPlain.Bizio.App.ViewModels
 {
-    public interface IAppViewModel : INavigationHandler
+    public interface IAppViewModel
     {
-        View CurrentContent { get; }
+        View? CurrentContent { get; set; }
     }
 
     public class AppViewModel : ViewModelBase, IAppViewModel
     {
-        public View CurrentContent
+        public View? CurrentContent
         {
             get => GetField<View>();
             set => SetField(value);
         }
-
-        public AppViewModel()
-        {
-        }
-
-        public void NavigateTo(View view) => CurrentContent = view;
     }
 }

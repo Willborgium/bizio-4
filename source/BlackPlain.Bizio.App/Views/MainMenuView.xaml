@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlackPlain.Bizio.App.Views.MainMenuView"
+             BackgroundColor="{StaticResource BackgroundColor2}">
+    <Grid Padding="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="1" Text="Bizio" FontFamily="Blacksword" FontSize="72" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource PrimaryContainer}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1" Grid.Row="1" Text="New Game" />
+                <Button Grid.Column="1" Grid.Row="3" Text="Load Game" />
+                <Button Grid.Column="1" Grid.Row="5" Text="Settings" />
+                <Button Grid.Column="1" Grid.Row="7" Text="Quit" />
+            </Grid>
+        </Border>
+    </Grid>
+</ContentView>

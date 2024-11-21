@@ -1,6 +1,8 @@
 ﻿using BlackPlain.Bizio.Core;
 using BlackPlain.Core;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
+using Microsoft.Maui.Platform;
 
 namespace BlackPlain.Bizio.App
 {
@@ -15,6 +17,8 @@ namespace BlackPlain.Bizio.App
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("KeepCalm-Medium.ttf", "KeepCalmMedium");
+                    fonts.AddFont("Blacksword.otf", "Blacksword");
                 });
 
 #if DEBUG

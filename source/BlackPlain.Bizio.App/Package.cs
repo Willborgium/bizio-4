@@ -1,5 +1,5 @@
-﻿using BlackPlain.Bizio.App.Pages;
-using BlackPlain.Bizio.App.ViewModels;
+﻿using BlackPlain.Bizio.App.ViewModels;
+using BlackPlain.Bizio.App.Views;
 
 namespace BlackPlain.Bizio.App
 {
@@ -9,10 +9,8 @@ namespace BlackPlain.Bizio.App
         {
             return services
                 .AddSingleton<IAppViewModel, AppViewModel>()
-                .AddTransient<ITestPageViewModel, TestPageViewModel>()
-                .AddTransient<ITestPage2ViewModel, TestPage2ViewModel>()
-                .AddTransient<TestPage>()
-                .AddTransient<TestPage2>();
+                .AddTransient<IMainMenuViewModel, MainMenuViewModel>()
+                .AddTransient<MainMenuView>();
         }
     }
 }
