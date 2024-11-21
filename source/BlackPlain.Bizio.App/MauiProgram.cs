@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BlackPlain.Bizio.Core;
+using BlackPlain.Core;
+using Microsoft.Extensions.Logging;
 
 namespace BlackPlain.Bizio.App
 {
@@ -16,10 +18,13 @@ namespace BlackPlain.Bizio.App
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-            builder.Services.RegisterBizioApp();
+            builder.Services
+                .RegisterCore()
+                .RegisterBizioCore()
+                .RegisterBizioApp();
 
             return builder.Build();
         }

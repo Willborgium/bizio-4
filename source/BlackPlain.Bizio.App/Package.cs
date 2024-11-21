@@ -1,5 +1,5 @@
-﻿using BlackPlain.Bizio.Core;
-using BlackPlain.Core;
+﻿using BlackPlain.Bizio.App.Pages;
+using BlackPlain.Bizio.App.ViewModels;
 
 namespace BlackPlain.Bizio.App
 {
@@ -8,8 +8,11 @@ namespace BlackPlain.Bizio.App
         public static IServiceCollection RegisterBizioApp(this IServiceCollection services)
         {
             return services
-                .RegisterBizioCore()
-                .RegisterCore();
+                .AddSingleton<IAppViewModel, AppViewModel>()
+                .AddTransient<ITestPageViewModel, TestPageViewModel>()
+                .AddTransient<ITestPage2ViewModel, TestPage2ViewModel>()
+                .AddTransient<TestPage>()
+                .AddTransient<TestPage2>();
         }
     }
 }

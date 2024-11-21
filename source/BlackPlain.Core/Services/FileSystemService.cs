@@ -12,7 +12,7 @@ namespace BlackPlain.Core.Services
             var p = Path.Combine(Directory.GetCurrentDirectory(), path);
 
             // make this work for app package files and system files
-            
+
             if (!File.Exists(p))
             {
                 using (var file = File.Create(p))
@@ -27,7 +27,7 @@ namespace BlackPlain.Core.Services
             {
                 data = await reader.ReadToEndAsync(cancellationToken);
             }
-            
+
             return JsonConvert.DeserializeObject<T>(data ?? string.Empty);
         }
 

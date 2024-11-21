@@ -1,9 +1,13 @@
+using BlackPlain.Bizio.App.ViewModels;
+
 namespace BlackPlain.Bizio.App.Pages;
 
-public partial class TestPage : ContentPage
+public partial class TestPage : ContentView
 {
-	public TestPage()
-	{
-		InitializeComponent();
-	}
+    public TestPage(IServiceProvider provider)
+    {
+        InitializeComponent();
+
+        BindingContext = provider.GetRequiredService<ITestPageViewModel>();
+    }
 }

@@ -12,6 +12,6 @@
         </ResourceDictionary>
     </Application.Resources>
     <Application.MainPage>
-        <local:AppShell />
+        <ContentPage Content="{Binding CurrentContent}" />
     </Application.MainPage>
 </Application>
